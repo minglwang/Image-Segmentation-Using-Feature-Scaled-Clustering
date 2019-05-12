@@ -187,7 +187,11 @@ where <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Clambda" alt="\inline \la
 <img src="https://tex.s2cms.ru/svg/k(x%2Cx')%20%3D%5Cfrac%7B1%7D%7B2%5Cpi%20h_%7Bp%7D%5E2%20h_%7Bc%7D%5E2%7D%20exp%5Cleft%5C%7B%5Cfrac%7B1%7D%7B2%20h_%7Bc%7D%5E2%7D%5Cleft%20%5CVert%20%5Cbegin%7Bbmatrix%7D%20u%5C%5C%20v%5Cend%7Bbmatrix%7D%20-%5Cbegin%7Bbmatrix%7D%20u'%5C%5C%20v'%5Cend%7Bbmatrix%7D%5Cright%5CVert%5E%7B2%7D%20%20-%20%5Cfrac%7B1%7D%7B2%20h_%7Bp%7D%5E2%7D%20%5Cleft%5CVert%20%5Cbegin%7Bbmatrix%7D%20c_%7Bx%7D%5C%5C%20c_%7By%7D%5Cend%7Bbmatrix%7D%20-%5Cbegin%7Bbmatrix%7D%20c_%7Bx%7D'%5C%5C%20c_%7By%7D'%5Cend%7Bbmatrix%7D%5Cright%20%5CVert%5Cright%5C%7D" alt="k(x,x') =\frac{1}{2\pi h_{p}^2 h_{c}^2} exp\left\{\frac{1}{2 h_{c}^2}\left \Vert \begin{bmatrix} u\\ v\end{bmatrix} -\begin{bmatrix} u'\\ v'\end{bmatrix}\right\Vert^{2}  - \frac{1}{2 h_{p}^2} \left\Vert \begin{bmatrix} c_{x}\\ c_{y}\end{bmatrix} -\begin{bmatrix} c_{x}'\\ c_{y}'\end{bmatrix}\right \Vert\right\}" />
 </p>
 
-where <img src="https://tex.s2cms.ru/svg/%5Cinline%20h_%7Bc%7D" alt="\inline h_{c}" /> is the bandwidth for the color features, and <img src="https://tex.s2cms.ru/svg/%5Cinline%20h_%7Bp%7D" alt="\inline h_{p}" /> is the bandwidth for the locations.
+where <img src="https://tex.s2cms.ru/svg/%5Cinline%20h_%7Bc%7D" alt="\inline h_{c}" /> is the bandwidth for the color features, and <img src="https://tex.s2cms.ru/svg/%5Cinline%20h_%7Bp%7D" alt="\inline h_{p}" /> is the bandwidth for the locations. Now we define the scaling factor 
+
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%20h%20%3A%3D%5Cfrac%7Bh_c%7D%7Bh_p%7D" alt=" h :=\frac{h_c}{h_p}" />
+</p>
 
 # Results
 The results based on raw data are not presented as they give poor segmentation. The feature location <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20(c_%7Bx%7D%3B%20c_%7By%7D)" alt=" \inline (c_{x}; c_{y})" /> of the image was scaled by <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Cfrac%7B(c_%7Bx%7D%3B%20c_%7By%7D)%7D%7B10%7D" alt=" \inline \frac{(c_{x}; c_{y})}{10}" />. The segmentation by the clustering algorithms with different parameters is shown below.
@@ -206,7 +210,7 @@ Fig.1 K-means clustering results with <img src="https://tex.s2cms.ru/svg/%5Cinli
 Fig.2 GMM clustering results with <img src="https://tex.s2cms.ru/svg/%5Cinline%20K%20%3D%204" alt="\inline K = 4" />
 
 <p align = "center">
-<img width = "650" height = "150" src =https://user-images.githubusercontent.com/45757826/57580221-4192a200-74a7-11e9-84df-551224718bb6.png>
+<img width = "650" height = "150" src =https://user-images.githubusercontent.com/45757826/57581037-eca85900-74b1-11e9-9699-1e6818ade68f.png>
 </p>
 
 Fig.3 mean-shift clustering with <img src="https://tex.s2cms.ru/svg/%5Cinline%20h%20%3D%2010" alt="\inline h = 10" />
