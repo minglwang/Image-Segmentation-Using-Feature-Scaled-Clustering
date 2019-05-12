@@ -1,4 +1,4 @@
-# Image-segmentation-using-clustering-algorithms
+# Image-Segmentation-Using-Feature-Scalled-Clustering
 
 The goal is to find homogeneous regions in the images which hopefully belong to objects or object parts. Below is one of the test images and an example segmentation using K-means (In the right image, each segment is colored based on the average color within the segment).
 <p align = "center">
@@ -24,7 +24,7 @@ represents one feature dimension over the entire image).
 <img width ="600" height="450", src = 
 https://user-images.githubusercontent.com/45757826/57579428-e3ac8d00-749b-11e9-8112-8cbfc3ac60fd.png>
 </p>
- 
+
 # Clustering Methods
 
 Next, three clustering algorithm is used to group the feature vectors, and cluster labels are assigned to each corresponding pixel forming the segmentation.
@@ -152,6 +152,8 @@ Combining the probability constraints and the above equation, we have
 
 Then we iterate the EM until convergence, we can get the parameters. 
 
+ [Back To The Top](#image-segmentation-using-feature-scalled-clustering)
+
 
 ## Mean Shift
 
@@ -166,6 +168,7 @@ where <img src="https://tex.s2cms.ru/svg/%5Cinline%20N(x)" alt="\inline N(x)" />
 
 The difference <img src="https://tex.s2cms.ru/svg/%20m(x)-%5Cmu" alt=" m(x)-\mu" /> is called mean shift in [Fukunaga and Hostetler](https://ieeexplore.ieee.org/document/1055330). The mean-shift algorithm now sets <img src="https://tex.s2cms.ru/svg/%20%5Cmu%20%5Cleftarrow%20m(x)%20" alt=" \mu \leftarrow m(x) " />, and repeats the estimation until <img src="https://tex.s2cms.ru/svg/%20m(x)" alt=" m(x)" />  converges.
 
+ [Back To The Top](#image-segmentation-using-feature-scalled-clustering)
 
 
 ## Modification
@@ -192,6 +195,9 @@ where <img src="https://tex.s2cms.ru/svg/%5Cinline%20h_%7Bc%7D" alt="\inline h_{
 <p align = "center">
 <img src="https://tex.s2cms.ru/svg/%20h%20%3A%3D%5Cfrac%7Bh_c%7D%7Bh_p%7D" alt=" h :=\frac{h_c}{h_p}" />
 </p>
+
+ [Back To The Top](#image-segmentation-using-feature-scalled-clustering)
+
 
 # Results
 The results based on raw data are not presented as they give poor segmentation. The feature location <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20(c_%7Bx%7D%3B%20c_%7By%7D)" alt=" \inline (c_{x}; c_{y})" /> of the image was scaled by <img src="https://tex.s2cms.ru/svg/%20%5Cinline%20%5Cfrac%7B(c_%7Bx%7D%3B%20c_%7By%7D)%7D%7B10%7D" alt=" \inline \frac{(c_{x}; c_{y})}{10}" />. The segmentation by the clustering algorithms with different parameters is shown below.
@@ -226,6 +232,8 @@ K means is sensitive to the <img src="https://tex.s2cms.ru/svg/K" alt="K" /> val
 Means shift is sensitive to the parameter <img src="https://tex.s2cms.ru/svg/h" alt="h" />. When the <img src="https://tex.s2cms.ru/svg/h" alt="h" /> is out of a certain range, segmentation is poor (h=10, h=13, h=15).
 For consideration of computational time, MS is the most computational costive, since it requires each data point converge to a cluster.  GMM has a modest computation cost and K Means is the most computationally efficient.
 
+[Back To The Top](#image-segmentation-using-feature-scalled-clustering)
+
 
 # How to Use
 The raw images are contained in [images](#).
@@ -258,6 +266,7 @@ csegm = colorsegm(segm, img)
 subplot(1,3,3); imagesc(csegm); axis image
 ```
 
+[Back To The Top](#image-segmentation-using-feature-scalled-clustering)
 
 
 
