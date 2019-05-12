@@ -210,7 +210,7 @@ Fig.1 K-means clustering results with <img src="https://tex.s2cms.ru/svg/%5Cinli
 Fig.2 GMM clustering results with <img src="https://tex.s2cms.ru/svg/%5Cinline%20K%20%3D%204" alt="\inline K = 4" />
 
 <p align = "center">
-<img width = "650" height = "150" src =https://user-images.githubusercontent.com/45757826/57581037-eca85900-74b1-11e9-9699-1e6818ade68f.png>
+<img src =https://user-images.githubusercontent.com/45757826/57581037-eca85900-74b1-11e9-9699-1e6818ade68f.png>
 </p>
 
 Fig.3 mean-shift clustering with <img src="https://tex.s2cms.ru/svg/%5Cinline%20h%20%3D%2010" alt="\inline h = 10" />
