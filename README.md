@@ -97,8 +97,7 @@ Then we rewrite it as
 <p align = "center">
 
  <img src="https://tex.s2cms.ru/svg/%0A%20%09p(x)%3D%5Csum_%7Bz%7Dp(z)p(x%5Cmid%20z)%3D%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%20%5Cmathcal%7BN%7D(x%20%5Cmid%20%5Cmu_k%2C%5CSigma_k)%2C%0A%20" alt="
- 	p(x)=\sum_{z}p(z)p(x\mid z)= \sum_{k=1}^{K} \pi_k \mathcal{N}(x \mid \mu_k,\Sigma_k),
- " /> 
+ 	p(x)=\sum_{z}p(z)p(x\mid z)= \sum_{k=1}^{K} \pi_k \mathcal{N}(x \mid \mu_k,\Sigma_k), " /> 
 </p>
 
 The parameters <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cvartheta%3D%20%5C%7B%5Cpi_k%2C%5Cmu_k%2C%5Csigma_k%5C%7D" alt="\inline \vartheta= \{\pi_k,\mu_k,\sigma_k\}" /> can be estimated using the expectation maximization (EM) algorithm:
@@ -107,22 +106,19 @@ The parameters <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cvartheta%3D%20%
  
 <img src="https://tex.s2cms.ru/svg/%0A%20%5Ctext%7BE%20step%3A%7D%5Cquad%20A(%5Cvartheta%2C%5Cvartheta_s)%20%3D%20E_z%5B%5Clog%20p(x%2Cz%5Cmid%5Cvartheta)%5Cmid%20x%2C%20%5Cvartheta_s%5D%2C%5C%5C%0A%20%5Ctext%7BM%20step%3A%7D%20%5Cquad%20%5Cvartheta_%7Bs%2B1%7D%20%3D%20%5Carg%20%5Cunderset%7B%5Cvartheta%7D%7B%5Cmax%7D%20%5C%3A%20A(%5Cvartheta%2C%20%5Cvartheta_s)%2C%20%5C%5C%0A%20" alt="
  \text{E step:}\quad A(\vartheta,\vartheta_s) = E_z[\log p(x,z\mid\vartheta)\mid x, \vartheta_s],\\
- \text{M step:} \quad \vartheta_{s+1} = \arg \underset{\vartheta}{\max} \: A(\vartheta, \vartheta_s), \\
- " />
+ \text{M step:} \quad \vartheta_{s+1} = \arg \underset{\vartheta}{\max} \: A(\vartheta, \vartheta_s)," />
 </p>
 
 where 
 
 <p align = "center">
 
-<img src="https://tex.s2cms.ru/svg/%09A(%5Cvartheta%2C%5Cvartheta_s)%20%3D%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%5Csum_%7Bt%3D1%7D%5E%7BN%7D%20E_z%5Bz_%7Bk%2Ct%7D%5Cmid%20x%2C%5Cvartheta_s%5D%5Cleft(%5Clog%5Cpi_%7Bk%7D%20%2B%20%5Clog%20p(x_t%20%5Cmid%20z_%7Bk%2Ct%7D%2C%20%5Cvartheta)%5Cright)%20%0A" alt="	A(\vartheta,\vartheta_s) = \sum_{k=1}^{K}\sum_{t=1}^{N} E_z[z_{k,t}\mid x,\vartheta_s]\left(\log\pi_{k} + \log p(x_t \mid z_{k,t}, \vartheta)\right) 
-" />
+<img src="https://tex.s2cms.ru/svg/%09A(%5Cvartheta%2C%5Cvartheta_s)%20%3D%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%5Csum_%7Bt%3D1%7D%5E%7BN%7D%20E_z%5Bz_%7Bk%2Ct%7D%5Cmid%20x%2C%5Cvartheta_s%5D%5Cleft(%5Clog%5Cpi_%7Bk%7D%20%2B%20%5Clog%20p(x_t%20%5Cmid%20z_%7Bk%2Ct%7D%2C%20%5Cvartheta)%5Cright)%20%0A" alt="	A(\vartheta,\vartheta_s) = \sum_{k=1}^{K}\sum_{t=1}^{N} E_z[z_{k,t}\mid x,\vartheta_s]\left(\log\pi_{k} + \log p(x_t \mid z_{k,t}, \vartheta)\right) " />
 </p>
 
 <p align = "center">
 
-<img src="https://tex.s2cms.ru/svg/%09E_%7Bz%7D%20%5Bz_%7Bk%2Ct%7D%5Cmid%20x%2C%5Cvartheta_s%5D%26%3Dp(z_%7Bk%2Ct%7D%3D1%5Cmid%20x%2C%5Ctheta_s)%3D%5Cfrac%7B%20%5Cpi_k%20p(x_t%5Cmid%20z_%7Bk%2Ct%7D%3D1%2C%5Cvartheta_s)%20%7D%7B%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%20p(x_t%5Cmid%20z_%7Bk%2Ct%7D%3D1%2C%5Cvartheta_s)%7D%5Ctriangleq%20%5Ctau_%7Bk%2Ct%7D%0A" alt="	E_{z} [z_{k,t}\mid x,\vartheta_s]&amp;=p(z_{k,t}=1\mid x,\theta_s)=\frac{ \pi_k p(x_t\mid z_{k,t}=1,\vartheta_s) }{ \sum_{k=1}^{K} \pi_k p(x_t\mid z_{k,t}=1,\vartheta_s)}\triangleq \tau_{k,t}
-" />
+<img src="https://tex.s2cms.ru/svg/%09E_%7Bz%7D%20%5Bz_%7Bk%2Ct%7D%5Cmid%20x%2C%5Cvartheta_s%5D%26%3Dp(z_%7Bk%2Ct%7D%3D1%5Cmid%20x%2C%5Ctheta_s)%3D%5Cfrac%7B%20%5Cpi_k%20p(x_t%5Cmid%20z_%7Bk%2Ct%7D%3D1%2C%5Cvartheta_s)%20%7D%7B%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%20p(x_t%5Cmid%20z_%7Bk%2Ct%7D%3D1%2C%5Cvartheta_s)%7D%5Ctriangleq%20%5Ctau_%7Bk%2Ct%7D%0A" alt="	E_{z} [z_{k,t}\mid x,\vartheta_s]&amp;=p(z_{k,t}=1\mid x,\theta_s)=\frac{ \pi_k p(x_t\mid z_{k,t}=1,\vartheta_s) }{ \sum_{k=1}^{K} \pi_k p(x_t\mid z_{k,t}=1,\vartheta_s)}\triangleq \tau_{k,t}" />
 </p>
 
 Take the derivative of <img src="https://tex.s2cms.ru/svg/A" alt="A" /> with respect to <img src="https://tex.s2cms.ru/svg/%5Cmu_k" alt="\mu_k" />, we have 
@@ -131,30 +127,26 @@ Take the derivative of <img src="https://tex.s2cms.ru/svg/A" alt="A" /> with res
 
 <img src="https://tex.s2cms.ru/svg/%09%5Cfrac%7B%5Cpartial%20A%7D%7B%20%5Cpartial%20%5Cmu_k%7D%20%26%3D%20%5Csum_%7Bt%3D1%7D%5E%7BN%7D%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%5Ctau_%7Bk%2Ct%7D%5Cfrac%7B%5Cpartial%20%5Clog%20p(x_t%5Cmid%20z_%7Bk%2Ct%7D%2C%5Cvartheta)%7D%7B%5Cpartial%20%5Cmu_%7Bk%7D%7D%3D0%20%5CRightarrow%0A%09%5Chat%7B%5Cmu%7D_k%3D%5Cfrac%7B%5Csum_%7Bt%3D1%7D%5E%7BN%7D%20%5Ctau_%7Bk%2Ct%7D%20x_t%7D%7B%5Csum_%7Bt%3D1%7D%5E%7BN%7D%5Ctau_%7Bk%2Ct%7D%7D%2C%5C%5C%0A%09%5Cfrac%7B%5Cpartial%20A%7D%7B%20%5Cpartial%20%5CSigma_k%7D%20%26%3D%20%5Csum_%7Bt%3D1%7D%5E%7BN%7D%5Ctau_%7Bk%2Ct%7D%5Cfrac%7B%5Cpartial%20%5Clog%20p(x_t%5Cmid%20z_%7Bk%2Ct%7D%2C%5Cvartheta)%7D%7B%5Cpartial%20%5CSigma_k%7D%3D0%20%5CRightarrow%20%5Chat%7B%5CSigma%7D_k%3D%5Cfrac%7B%5Csum_%7Bt%3D1%7D%5E%7BN%7D%20%5Ctau_%7Bk%2Ct%7D%20(x_t-%5Cmu_k)(x_t-%5Cmu_k)%5ET%7D%7B%5Csum_%7Bt%3D1%7D%5E%7BN%7D%5Ctau_%7Bk%2Ct%7D%7D%0A" alt="	\frac{\partial A}{ \partial \mu_k} &amp;= \sum_{t=1}^{N} \sum_{k=1}^{K}\tau_{k,t}\frac{\partial \log p(x_t\mid z_{k,t},\vartheta)}{\partial \mu_{k}}=0 \Rightarrow
 	\hat{\mu}_k=\frac{\sum_{t=1}^{N} \tau_{k,t} x_t}{\sum_{t=1}^{N}\tau_{k,t}},\\
-	\frac{\partial A}{ \partial \Sigma_k} &amp;= \sum_{t=1}^{N}\tau_{k,t}\frac{\partial \log p(x_t\mid z_{k,t},\vartheta)}{\partial \Sigma_k}=0 \Rightarrow \hat{\Sigma}_k=\frac{\sum_{t=1}^{N} \tau_{k,t} (x_t-\mu_k)(x_t-\mu_k)^T}{\sum_{t=1}^{N}\tau_{k,t}}
-" />
+	\frac{\partial A}{ \partial \Sigma_k} &amp;= \sum_{t=1}^{N}\tau_{k,t}\frac{\partial \log p(x_t\mid z_{k,t},\vartheta)}{\partial \Sigma_k}=0 \Rightarrow \hat{\Sigma}_k=\frac{\sum_{t=1}^{N} \tau_{k,t} (x_t-\mu_k)(x_t-\mu_k)^T}{\sum_{t=1}^{N}\tau_{k,t}}," />
 </p>
 
 We should also consider the probability constraint, thus it is standard to use the Lagrangian multiplier as
 
 <p align = "center">
 
-<img src="https://tex.s2cms.ru/svg/%09J(%5Cvartheta%2C%5Cvartheta_s)%3DA(%5Cvartheta%2C%5Cvartheta_s)%2B%5Clambda%5Cleft(1-%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%5Cright)%0A" alt="	J(\vartheta,\vartheta_s)=A(\vartheta,\vartheta_s)+\lambda\left(1-\sum_{k=1}^{K} \pi_k\right)
-" />
+<img src="https://tex.s2cms.ru/svg/%09J(%5Cvartheta%2C%5Cvartheta_s)%3DA(%5Cvartheta%2C%5Cvartheta_s)%2B%5Clambda%5Cleft(1-%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%5Cright)%0A" alt="J(\vartheta,\vartheta_s)=A(\vartheta,\vartheta_s)+\lambda\left(1-\sum_{k=1}^{K} \pi_k\right)" />
 </p>
 
 Thus, to find the optimal <img src="https://tex.s2cms.ru/svg/%5Cpi_k" alt="\pi_k" />, we take the derivative to <img src="https://tex.s2cms.ru/svg/J" alt="J" /> with respect to <img src="https://tex.s2cms.ru/svg/%5Cpi_k" alt="\pi_k" />
 
-<p align = "center">
 
-<img src="https://tex.s2cms.ru/svg/%09%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20%5Cpi_k%7D%3D%5Csum_%7Bt%3D1%7D%5E%7BN%7D%20%5Ctau_%7Bk%2Ct%7D%5Cfrac%7B1%7D%7B%5Cpi_k%7D-%5Clambda%3D0%20%0A" alt="	\frac{\partial J}{\partial \pi_k}=\sum_{t=1}^{N} \tau_{k,t}\frac{1}{\pi_k}-\lambda=0 
-" />
+<p align = "center">
+<img src="https://tex.s2cms.ru/svg/%09%5Cfrac%7B%5Cpartial%20J%7D%7B%5Cpartial%20%5Cpi_k%7D%3D%5Csum_%7Bt%3D1%7D%5E%7BN%7D%20%5Ctau_%7Bk%2Ct%7D%5Cfrac%7B1%7D%7B%5Cpi_k%7D-%5Clambda%3D0%20%0A" alt="\frac{\partial J}{\partial \pi_k}=\sum_{t=1}^{N} \tau_{k,t}\frac{1}{\pi_k}-\lambda=0 " />
 </p>
 
 Combining the probability constraints and the above equation, we have 
 
 <p align = "center">
-
 <img src="https://tex.s2cms.ru/svg/%20%5Chat%7B%5Cpi%7D_k%3D%5Cfrac%7B1%7D%7BN%7D%7B%5Csum_%7Bt%3D1%7D%5E%7BN%7D%5Ctau_%7Bk%2Ct%7D%7D." alt=" \hat{\pi}_k=\frac{1}{N}{\sum_{t=1}^{N}\tau_{k,t}}." /> 
 </p>
 
