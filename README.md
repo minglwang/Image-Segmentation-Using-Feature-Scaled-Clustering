@@ -64,10 +64,8 @@ The algorithm has converged when the assignments no longer change. However, the 
 The GMM is weighted sum of Gaussian distributions, 
 
 <p align = "center">
-
 <img src="https://tex.s2cms.ru/svg/%0A%20p(x%5Cmid%20%5Cvartheta)%3D%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%20%5Cmathcal%7BN%7D(x%20%5Cmid%20%5Cmu_k%2C%5CSigma_k)%2C%0A%20" alt="
- p(x\mid \vartheta)= \sum_{k=1}^{K} \pi_k \mathcal{N}(x \mid \mu_k,\Sigma_k),
- " />
+ p(x\mid \vartheta)= \sum_{k=1}^{K} \pi_k \mathcal{N}(x \mid \mu_k,\Sigma_k)," />
 
 </p>
 
@@ -97,7 +95,7 @@ Then we rewrite it as
 <p align = "center">
 
  <img src="https://tex.s2cms.ru/svg/%0A%20%09p(x)%3D%5Csum_%7Bz%7Dp(z)p(x%5Cmid%20z)%3D%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%20%5Cmathcal%7BN%7D(x%20%5Cmid%20%5Cmu_k%2C%5CSigma_k)%2C%0A%20" alt="
- 	p(x)=\sum_{z}p(z)p(x\mid z)= \sum_{k=1}^{K} \pi_k \mathcal{N}(x \mid \mu_k,\Sigma_k), " /> 
+ 	p(x)=\sum_{z}p(z)p(x\mid z)= \sum_{k=1}^{K} \pi_k \mathcal{N}(x \mid \mu_k,\Sigma_k)," /> 
 </p>
 
 The parameters <img src="https://tex.s2cms.ru/svg/%5Cinline%20%5Cvartheta%3D%20%5C%7B%5Cpi_k%2C%5Cmu_k%2C%5Csigma_k%5C%7D" alt="\inline \vartheta= \{\pi_k,\mu_k,\sigma_k\}" /> can be estimated using the expectation maximization (EM) algorithm:
