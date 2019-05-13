@@ -1,4 +1,5 @@
-# Image-Segmentation-Using-Feature-Scalled-Clustering
+# Image-Segmentation-Using-Feature-Weighted-Clustering
+
 
 The goal is to find homogeneous regions in the images which hopefully belong to objects or object parts. Below is one of the test images and an example segmentation using K-means (In the right image, each segment is colored based on the average color within the segment).
 <p align = "center">
@@ -58,6 +59,9 @@ where each <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_%7Bp%7D" alt="\inlin
 </p>
 
 The algorithm has converged when the assignments no longer change. However, the algorithm does not guarantee to find the optimum.
+
+ [Back To The Top](#image-segmentation-using-feature-weighted-clustering)
+
 
 ## Gaussian Mixture Models
 
@@ -150,7 +154,7 @@ Combining the probability constraints and the above equation, we have
 
 Then we iterate the EM until convergence, we can get the parameters. 
 
- [Back To The Top](#image-segmentation-using-feature-scalled-clustering)
+ [Back To The Top](#image-segmentation-using-feature-weighted-clustering)
 
 
 ## Mean Shift
