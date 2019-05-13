@@ -1,4 +1,4 @@
-# Image-Segmentation-Using-Feature-Weighted-Clustering
+# Image-Segmentation-Using-Feature-Scaled-Clustering
 
 
 The goal is to find homogeneous regions in the images which hopefully belong to objects or object parts. Below is one of the test images and an example segmentation using K-means (In the right image, each segment is colored based on the average color within the segment).
@@ -60,7 +60,7 @@ where each <img src="https://tex.s2cms.ru/svg/%5Cinline%20x_%7Bp%7D" alt="\inlin
 
 The algorithm has converged when the assignments no longer change. However, the algorithm does not guarantee to find the optimum.
 
- [Back To The Top](#image-segmentation-using-feature-weighted-clustering)
+ [Back To The Top](#image-segmentation-using-feature-scaled-clustering)
 
 
 ## Gaussian Mixture Models
@@ -154,7 +154,7 @@ Combining the probability constraints and the above equation, we have
 
 Then we iterate the EM until convergence, we can get the parameters. 
 
- [Back To The Top](#image-segmentation-using-feature-weighted-clustering)
+ [Back To The Top](#image-segmentation-using-feature-scaled-clustering)
 
 
 ## Mean Shift
@@ -170,7 +170,7 @@ where <img src="https://tex.s2cms.ru/svg/%5Cinline%20N(x)" alt="\inline N(x)" />
 
 The difference <img src="https://tex.s2cms.ru/svg/%20m(x)-%5Cmu" alt=" m(x)-\mu" /> is called mean shift in [Fukunaga and Hostetler](https://ieeexplore.ieee.org/document/1055330). The mean-shift algorithm now sets <img src="https://tex.s2cms.ru/svg/%20%5Cmu%20%5Cleftarrow%20m(x)%20" alt=" \mu \leftarrow m(x) " />, and repeats the estimation until <img src="https://tex.s2cms.ru/svg/%20m(x)" alt=" m(x)" />  converges.
 
- [Back To The Top](#image-segmentation-using-feature-weighted-clustering)
+ [Back To The Top](#image-segmentation-using-feature-scaled-clustering)
 
 
 ## Modification
@@ -198,7 +198,7 @@ where <img src="https://tex.s2cms.ru/svg/%5Cinline%20h_%7Bc%7D" alt="\inline h_{
 <img src="https://tex.s2cms.ru/svg/%20h%20%3A%3D%5Cfrac%7Bh_c%7D%7Bh_p%7D" alt=" h :=\frac{h_c}{h_p}" />
 </p>
 
- [Back To The Top](#image-segmentation-using-feature-weighted-clustering)
+ [Back To The Top](#image-segmentation-using-feature-scaled-clustering)
 
 
 # Results
@@ -234,7 +234,7 @@ K means is sensitive to the <img src="https://tex.s2cms.ru/svg/K" alt="K" /> val
 Means shift is sensitive to the parameter <img src="https://tex.s2cms.ru/svg/h" alt="h" />. When the <img src="https://tex.s2cms.ru/svg/h" alt="h" /> is out of a certain range, segmentation is poor (h=10, h=13, h=15).
 For consideration of computational time, MS is the most computational costive, since it requires each data point converge to a cluster.  GMM has a modest computation cost and K Means is the most computationally efficient.
 
- [Back To The Top](#image-segmentation-using-feature-weighted-clustering)
+ [Back To The Top](#image-segmentation-using-feature-scaled-clustering)
 
 
 # How to Use
@@ -268,7 +268,7 @@ csegm = colorsegm(segm, img)
 subplot(1,3,3); imagesc(csegm); axis image
 ```
 
-[Back To The Top](#image-segmentation-using-feature-scalled-clustering)
+[Back To The Top](#image-segmentation-using-feature-scaled-clustering)
 
 
 
