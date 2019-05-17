@@ -68,6 +68,7 @@ The algorithm has converged when the assignments no longer change. However, the 
 The GMM is weighted sum of Gaussian distributions, 
 
 <p align = "center">
+	
 <img src="https://tex.s2cms.ru/svg/%0A%20p(x%5Cmid%20%5Cvartheta)%3D%20%5Csum_%7Bk%3D1%7D%5E%7BK%7D%20%5Cpi_k%20%5Cmathcal%7BN%7D(x%20%5Cmid%20%5Cmu_k%2C%5CSigma_k)%2C%0A%20" alt="
  p(x\mid \vartheta)= \sum_{k=1}^{K} \pi_k \mathcal{N}(x \mid \mu_k,\Sigma_k)," />
 
