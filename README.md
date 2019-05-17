@@ -22,7 +22,7 @@ To segment the image, we first extract feature vectors from each pixel in the im
 represents one feature dimension over the entire image). 
 
 <p align = "center">
-<img width ="600" height="450", src = 
+<img width ="700" height="450", src = 
 https://user-images.githubusercontent.com/45757826/57579428-e3ac8d00-749b-11e9-8112-8cbfc3ac60fd.png>
 </p>
 
