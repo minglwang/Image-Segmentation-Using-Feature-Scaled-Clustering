@@ -3,7 +3,7 @@
 
 The goal is to find homogeneous regions in the images which hopefully belong to objects or object parts. Below is one of the test images and an example segmentation using K-means (In the right image, each segment is colored based on the average color within the segment).
 <p align = "center">
-<img width ="600" height="180", src = 
+<img width ="700" height="180", src = 
 https://user-images.githubusercontent.com/45757826/57579422-c972af00-749b-11e9-99ca-8847a548e730.png>
 </p>
 
